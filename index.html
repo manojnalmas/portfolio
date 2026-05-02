@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium Portfolio</title>
+
+<style>
+:root {
+  --bg: #0f172a;
+  --text: #ffffff;
+  --card: rgba(255,255,255,0.05);
+}
+
+.light-mode {
+  --bg: #f5f5f5;
+  --text: #111;
+  --card: rgba(0,0,0,0.05);
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.3s;
+  scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+nav {
+  position: fixed;
+  width: 95%;
+  top: 0;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+nav a {
+  margin-left: 15px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero img {
+  width: 130px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.typing {
+  color: #38bdf8;
+  font-weight: bold;
+}
+
+/* BUTTON */
+.btn {
+  padding: 10px 20px;
+  background: #38bdf8;
+  color: black;
+  border-radius: 5px;
+  text-decoration: none;
+  margin: 10px;
+}
+
+/* SECTION */
+section {
+  padding: 80px 40px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s;
+}
+
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px 0;
+  backdrop-filter: blur(10px);
+}
+
+/* SKILLS */
+.skills span {
+  display: inline-block;
+  padding: 8px 12px;
+  background: #38bdf8;
+  color: black;
+  border-radius: 20px;
+  margin: 5px;
+}
+
+/* TOGGLE */
+.toggle {
+  cursor: pointer;
+  background: #38bdf8;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: black;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  nav {flex-direction: column;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div>MyPortfolio</div>
+  <div>
+    <a href="#about">Objective</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+    <span class="toggle" onclick="toggleMode()">Mode</span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <img src="profile.jpg" alt="profile">
+  <h1>NALUMACHU MANOJ</h1>
+  <p class="typing"></p>
+  <p>📍 Hyderabad, Telangana</p>
+
+  <a href="resume.pdf" download class="btn">Download Resume</a>
+  <a href="#contact" class="btn">Contact</a>
+</div>
+
+<!-- OBJECTIVE -->
+<section id="about">
+  <h2>Career Objective</h2>
+  <div class="card">
+    Motivated Electronics and Communication Engineering student with a strong interest in software development and IT. Currently building skills in web development, Python, SQL, and problem-solving. Seeking an opportunity to start my career in the software industry where I can apply my technical knowledge, learn continuously, and contribute to organizational growth.
+  </div>
+</section>
+
+<!-- PERSONAL -->
+<section>
+  <h2>Personal Info</h2>
+  <div class="card">
+    <p>Email: <a href="mailto:manojnalmas@gmail.com">manojnalmas@gmail.com</a></p>
+    <p>Phone: +91-9059176024</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/nalumachu-manoj-80aa84384" target="_blank">LinkedIn Profile</a></p>
+    
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section>
+  <h2>Education</h2>
+  <div class="card">Bachelor of Technology(B.Tech) - 4th Year in Electronics and Communication Engineering
+    <p>College : Teegala Krishna Reddy Engineering College</p>
+    <p>Batch : 2023–2027</p>
+    <p>CGPA : 7.13</p>
+
+  </div>
+    
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <span>React</span> <br>
+    <span>Python</span>
+    <span>MySQL</span>
+    <span>Excel</span>
+    <span>Git&GitHub</span>
+    
+    
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section>
+  <h2>Certifications</h2>
+  <div class="card">
+    <p>Python Certification</p>
+    <a href="https://intellipaat.com/academy/certificate-link/?Yz0xNTQzJnU9MzQ1NzMxJmV4dD0x" target="_blank">View Certificate</a>
+    <p>SQL Certification</p>
+    <a href="https://www.hackerrank.com/certificates/iframe/bc7e6f5ab8b7" target="_blank">View Certificate</a>
+    <p>Excel Certification</p>
+    <a href="https://intellipaat.com/academy/certificate-link/?Yz0yNTgxJnU9MzQ1NzMxJmV4dD0x" target="_blank">View Certificate</a>
+  </div>
+</section>
+
+<!-- LANGUAGES -->
+<section>
+  <h2>Languages</h2>
+  <div class="card">English, Telugu, Hindi</div>
+</section>
+
+<!-- ACTIVITIES -->
+<section>
+  <h2>Activities</h2>
+  <div class="card">Building projects,coding challenges,learning new technologies</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <form onsubmit="return sendMsg()">
+    <input type="text" placeholder="Name" required><br><br>
+    <input type="email" placeholder="Email" required><br><br>
+    <textarea placeholder="Message" required></textarea><br><br>
+    <button class="btn">Send</button>
+  </form>
+</section>
+
+<footer>
+  © 2026 NALUMACHU MANOJ
+</footer>
+
+
+
+
+
+<script>
+// TYPING EFFECT
+const text = ["Web Developer", "Software Developer", "Backend Developer"];
+let i = 0, j = 0;
+const typing = document.querySelector(".typing");
+
+function type() {
+  if (j < text[i].length) {
+    typing.innerHTML += text[i].charAt(j);
+    j++;
+    setTimeout(type, 100);
+  } else {
+    setTimeout(erase, 1000);
+  }
+}
+
+function erase() {
+  if (j > 0) {
+    typing.innerHTML = text[i].substring(0, j-1);
+    j--;
+    setTimeout(erase, 50);
+  } else {
+    i = (i + 1) % text.length;
+    setTimeout(type, 200);
+  }
+}
+type();
+
+// SCROLL ANIMATION
+const sections = document.querySelectorAll("section");
+window.addEventListener("scroll", () => {
+  sections.forEach(sec => {
+    if (window.scrollY > sec.offsetTop - 400) {
+      sec.classList.add("show");
+    }
+  });
+});
+
+// DARK MODE
+function toggleMode() {
+  document.body.classList.toggle("light-mode");
+}
+
+// FORM
+function sendMsg(){
+  alert("Message sent!");
+  return false;
+}
+</script>
+
+
+
+
+
+
+</body>
+</html>
